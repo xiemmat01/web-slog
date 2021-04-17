@@ -98,7 +98,7 @@ header .container-fluid {
   font-weight: bold;
 }
 .navbar-nav.navbar-top-2 .nav-item {
-  margin-right: 20px;
+  margin-right: 40px;
 }
 .navbar-nav.navbar-top-2 .nav-link {
   color: #013752;
@@ -182,7 +182,7 @@ header .container-fluid {
   padding-bottom: 4.3rem;
 }
 /*--------------#region Main ---------------*/
-/*------------- Section 1 -----------------*/
+/*------------- Section intro-1 -----------------*/
 .block-intro {
   padding-top: 20px;
   position: relative;
@@ -224,7 +224,7 @@ header .container-fluid {
 .block-intro .card-body .card-title{
   margin-top: 10px;
 }
-/*----------- Section 2 --------------------*/
+/*----------- Section intro-2 --------------------*/
 .block-intro-2.center {
   text-align: center;
 }
@@ -246,7 +246,7 @@ header .container-fluid {
 }
 .block-intro-2 .bg {
   width: 100%;
-  padding-top: 100%;
+  padding-top: 700px;
   position: absolute;
   top: 0;
   left: 0;
@@ -411,7 +411,36 @@ header .container-fluid {
   font-size: 19px;
   font-weight: 800;
 }
-/* Section 3 */
+/* -------- Section intro-3 --------- */
+.block-intro-3 {
+  text-align: center;
+}
+.block-intro-3 .title{
+  color: #013752;
+  font-weight: bold;
+}
+.block-intro-3 .title span{
+  color: #ff5d14;
+}
+.block-intro-3 .block-img{
+  position: relative;
+}
+.block-intro-3 .block-img .btn-play{
+  background-color: white;
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  padding-left: 15px;
+  position: absolute;
+  top: 40%;
+  right: 45%;
+  border: none;
+}
+.block-intro-3 .block-img .btn-play:hover{
+  box-shadow: 0 0 0 2px #bdbdbd;
+
+}
+/* Section feature */
 .block-features {
   text-align: center;
   padding-top: 30px;
