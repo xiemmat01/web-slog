@@ -221,7 +221,7 @@ header .container-fluid {
   left: -20px;
   top: 10%;
 }
-.block-intro .card-body .card-title{
+.block-intro .card-body .card-title {
   margin-top: 10px;
 }
 /*----------- Section intro-2 --------------------*/
@@ -231,11 +231,11 @@ header .container-fluid {
 .block-intro-2 .block-inner {
   padding: 50px 0;
 }
-.block-intro-2 .block-inner .title{
+.block-intro-2 .block-inner .title {
   color: #03415f;
   font-weight: bold;
 }
-.block-intro-2 .block-inner .title span{
+.block-intro-2 .block-inner .title span {
   color: #eb6219;
 }
 .block-inner .block-container {
@@ -260,7 +260,7 @@ header .container-fluid {
   padding: 50% 0 0;
   position: relative;
 }
-.block-intro-2 .item{
+.block-intro-2 .item {
   position: absolute;
   top: 8%;
 }
@@ -415,30 +415,34 @@ header .container-fluid {
 .block-intro-3 {
   text-align: center;
 }
-.block-intro-3 .title{
+.block-intro-3 .title {
   color: #013752;
   font-weight: bold;
 }
-.block-intro-3 .title span{
+.block-intro-3 .title span {
   color: #ff5d14;
 }
-.block-intro-3 .block-img{
+.block-intro-3 .block-img {
   position: relative;
 }
-.block-intro-3 .block-img .btn-play{
+.block-intro-3 .block-img img{
+  width: 100%;
+}
+.block-intro-3 .block-img .btn-play {
   background-color: white;
   border-radius: 100%;
   width: 65px;
   height: 65px;
-  padding-left: 15px;
   position: absolute;
-  top: 40%;
-  right: 45%;
+  top: 35%;
+  right: 40%;
   border: none;
+  background-image: url(../icons/play.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.block-intro-3 .block-img .btn-play:hover{
+.block-intro-3 .block-img .btn-play:hover {
   box-shadow: 0 0 0 2px #bdbdbd;
-
 }
 /* Section feature */
 .block-features {
@@ -469,7 +473,7 @@ header .container-fluid {
   color: #ff8240;
   line-height: 12vh;
 }
-/*-------- Section 4 -----------*/
+/*-------- Section news -----------*/
 .block-news {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -698,6 +702,8 @@ footer {
   .block-intro-2 .item p {
     background-color: transparent;
   }
+  /* block-intro-3 */
+
 }
 @media (max-width: 575.98px) {
   .block-banner .content .mt-5 {
