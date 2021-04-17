@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#light-slider').lightSlider({
+    var slider = $('#light-slider').lightSlider({
         item: 6,
         loop: true,
         slideMove: 2,
@@ -7,6 +7,7 @@ $(document).ready(function () {
         speed: 600,
         enableDrag: false,
         pager: false,
+        controls: false,
         responsive: [
             {
                 breakpoint: 900,
@@ -47,15 +48,22 @@ $(document).ready(function () {
             }
         ]
     });
+    $('#goToPrevSlide').on('click', function () {
+        slider.goToPrevSlide();
+    });
+    $('#goToNextSlide').on('click', function () {
+        slider.goToNextSlide();
+    });
     $('#news-slide').lightSlider({
         item: 3,
-        auto: true,
-        loop: true,
+        auto: false,
+        loop: false,
         slideMove: 1,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed: 600,
         pauseOnHover: true,
         controls: false,
+        pager: false,
         responsive: [
             {
                 breakpoint: 767,
