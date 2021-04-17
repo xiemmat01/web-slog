@@ -229,10 +229,17 @@ header .container-fluid {
   text-align: center;
 }
 .block-intro-2 .block-inner {
-  padding: 60px 0;
+  padding: 50px 0;
+}
+.block-intro-2 .block-inner .title{
+  color: #03415f;
+  font-weight: bold;
+}
+.block-intro-2 .block-inner .title span{
+  color: #eb6219;
 }
 .block-inner .block-container {
-  max-width: 850px;
+  max-width: 100%;
   width: 100%;
   margin: 30px auto;
   position: relative;
@@ -243,24 +250,30 @@ header .container-fluid {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../images/bg_app.png);
+  background-image: url(../images/slog-ketnoi.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 .block-intro-2 .placeholder {
   text-align: center;
   width: 100%;
-  padding: 100% 0 0;
+  padding: 50% 0 0;
   position: relative;
 }
-.block-intro-2 .item {
+.block-intro-2 .item{
   position: absolute;
-  width: 120px;
-  height: 120px;
-  font-size: 12px;
-  line-height: 17px;
-  color: #3e3e3e;
-  font-weight: 700;
+  top: 8%;
+}
+.block-intro-2 .item.left {
+  background-image: url(../images/phone.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 360px;
+  height: 600px;
+  left: 15%;
+}
+.block-intro-2 .item.right {
+  right: 15%;
 }
 .block-intro-2 .item .block-icon {
   width: 67px;
@@ -478,7 +491,7 @@ header .container-fluid {
 footer {
   background-image: url(../images/bg-footer.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: center;
 }
 .text-footer ul li a {
