@@ -17,6 +17,7 @@ a {
 .main-header {
   background-color: #fff;
   font-weight: 500;
+  font-size: 18px;
 }
 header .container-fluid {
   padding-right: 0px !important;
@@ -32,7 +33,7 @@ header .container-fluid {
 .navbar .navbar-brand .nav-img {
   width: 250px;
 }
-.navbar-expand-lg .navbar-collapse {
+.navbar-expand-xl .navbar-collapse {
   flex-direction: column;
 }
 .navbar .navbar-nav.navbar-top-1 {
@@ -42,7 +43,7 @@ header .container-fluid {
 }
 .navbar .navbar-nav.navbar-top-1::after {
   content: "";
-  width: 99%;
+  width: 99.5%;
   border-bottom: #7c7b7b62 solid 0.5px;
   position: absolute;
   margin-left: 10px;
@@ -87,17 +88,13 @@ header .container-fluid {
 .navbar-top-1 .form .form-search .form-control:focus {
   box-shadow: none;
 }
-/* .navbar-nav.navbar-top-1 .nav-link:focus,
-.navbar-nav.navbar-top-1 .nav-link:hover {
-  color: rgb(235, 222, 222);
-} */
 .navbar .navbar-nav.navbar-top-2 {
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-weight: bold;
 }
 .navbar-nav.navbar-top-2 .nav-item {
-  margin-right: 2%;
+  width: 15%;
 }
 .navbar-nav.navbar-top-2 .nav-link {
   color: #013752;
@@ -127,9 +124,13 @@ header .container-fluid {
 .change .bar3 {
   transform: rotate(45deg) translate(-4px, -3px);
 }
+#slick.dd-container {
+  padding: 0 0 0 20px;
+}
 .dd-select {
   border: none !important;
 }
+
 /*----------- Banner ---------------*/
 .block-banner {
   position: relative;
@@ -165,7 +166,7 @@ header .container-fluid {
   color: #013752b0;
 }
 .block-banner .content .title {
-  font-size: 2rem;
+  font-size: 3vw;
   margin-left: 4.5rem;
   font-family: myriad-pro, sans-serif;
   font-weight: 700;
@@ -174,11 +175,11 @@ header .container-fluid {
 .block-banner .content .title:nth-child(1) {
   font-family: "Agency FB Bold";
   font-weight: normal;
-  font-size: 3.5rem;
+  font-size: 4vw;
   color: #ff5d14;
 }
 .block-banner .content .title:nth-child(3) {
-  padding-bottom: 4.3rem;
+  padding-bottom: auto;
 }
 /*--------------#region Main ---------------*/
 /*------------- Section intro-1 -----------------*/
@@ -222,6 +223,10 @@ header .container-fluid {
 }
 .block-intro .card-body .card-title {
   margin-top: 10px;
+  font-size: 24px;
+}
+.block-intro .card-body .card-text {
+  font-size: 18px;
 }
 /*----------- Section intro-2 --------------------*/
 .block-intro-2 {
@@ -231,7 +236,7 @@ header .container-fluid {
   color: #03415f;
   font-weight: bold;
   font-size: 1.7rem;
-  padding-bottom: 20px;
+  padding: 0 20px 30px;
 }
 .block-intro-2 .title span {
   color: #eb6219;
@@ -261,9 +266,11 @@ header .container-fluid {
   margin-top: 3%;
 }
 .block-intro-2 .item.left {
+  width: 39%;
   background-image: url(../images/phone.png);
-  background-size: 90%;
+  background-size: 80%;
   background-repeat: no-repeat;
+  /* background-position: center; */
   padding: 50% 0 0;
 }
 .block-intro-2 .item.right {
@@ -295,7 +302,7 @@ header .container-fluid {
 .block-intro-2 .item.right .item-inner:not(:nth-child(5))::before {
   content: "";
   display: block;
-  height: 65%;
+  height: calc(100% - 38%);
   border-left: 1px solid #a1a0a09c;
   position: absolute;
   left: 36px;
@@ -315,24 +322,52 @@ header .container-fluid {
   flex-wrap: nowrap;
 }
 .block-intro-2 .item.right .item-inner:not(:nth-child(1)) {
-  margin-top: 5%;
+  margin-top: 3%;
+}
+.block-intro-2 .item.right .item-inner:last-child {
+  margin-top: 5% !important;
 }
 .block-intro-2 .item.right .btn-dk-xe,
 .block-intro-2 .item.right .btn-dk-hang {
-  width: 200px;
-  height: 50px;
+  width: 15vw;
+  height: 70px;
   font-size: 20px;
   color: white;
-  margin-right: 9%;
   background-color: #df5727;
+  border-radius: 8px;
+}
+.block-intro-2 .item.right .btn-dk-xe {
+  background-image: url(../images/btn-dk-xe.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .block-intro-2 .item.right .btn-dk-hang {
-  width: 210px;
+  background-image: url(../images/btn-dk-hang.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.block-intro-2 .item.right .item-inner ul {
+  width: 100%;
+}
+.block-intro-2 .item.right .item-inner ul li {
+  padding: 0 20px;
+}
+.block-intro-2 .item.right .item-inner ul li:nth-child(1) {
+  padding-left: 3vw;
 }
 /* -------- Section intro-3 --------- */
 .block-intro-3 {
   margin-top: 3rem;
   text-align: center;
+  position: relative;
+}
+.block-intro-3 .block-inner {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 .block-intro-3 .title {
   color: #013752;
@@ -341,6 +376,10 @@ header .container-fluid {
 }
 .block-intro-3 .title span {
   color: #ff5d14;
+}
+.block-intro-3 .block-content {
+  padding: 0 30px;
+  width: 50%;
 }
 .block-intro-3 .block-img {
   position: relative;
@@ -364,9 +403,11 @@ header .container-fluid {
   background-image: url(../icons/play.png);
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.5s ease;
+  animation: pulse 1.5s ease-out infinite;
 }
 .block-intro-3 .block-img .btn-play:hover {
-  box-shadow: 0 0 0 2px #bdbdbd;
+  background-size: 100%;
 }
 /* Section feature */
 .block-features {
@@ -380,13 +421,14 @@ header .container-fluid {
 .block-features .inline-list {
   list-style: none;
   margin-top: 30px;
+  justify-content: center;
 }
 .block-features .inline-list li {
-  padding: 0 80px;
+  padding: 0 4%;
   text-align: left;
 }
 .block-features .inline-list li p {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 20px;
 }
 .block-features .head-title {
@@ -409,22 +451,26 @@ header .container-fluid {
   color: #013752;
   font-size: 2.5rem;
 }
-
+.block-news .card {
+  padding: 0 2vw;
+  border: none;
+}
 .block-news .card-text:last-child {
-  font-size: 14px;
+  font-size: 16px;
 }
 .block-news .card-body {
   text-align: left;
   padding: 1rem 0 0 0;
 }
 .block-news .card-title {
-  font-size: 16px;
+  font-size: 18px;
 }
 /* ---------Section brand -----------*/
 .block-brand {
   text-align: center;
   background-color: white;
   height: 250px;
+  position: relative;
 }
 .block-brand .heading {
   padding-top: 30px;
@@ -441,55 +487,77 @@ header .container-fluid {
   margin: 0;
   display: flex;
   flex-direction: row;
+  height: 150px;
 }
 .slider .item {
   margin-right: 20px;
 }
 .slider .item img {
-  width: 120px;
-  height: 50px;
+  width: 150px;
+  height: 70px;
 }
-
+#goToPrevSlide,
+#goToNextSlide {
+  border: none;
+  background-color: transparent;
+  color: #df5727;
+  position: absolute;
+  top: 50%;
+}
+#goToPrevSlide {
+  left: 5%;
+}
+#goToNextSlide {
+  right: 5%;
+}
+#goToPrevSlide i,
+#goToNextSlide i {
+  font-size: 26px;
+}
+/* ---- btn go-to-top ---- */
+#go-to-top {
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #ffffff;
+  border-radius: 100%;
+  background-color: #eb6219;
+  margin: 0;
+  padding: 0;
+  right: 30px;
+  bottom: 50px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+#go-to-top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#go-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
 /*-------------- #endregion Main -----------*/
 /*------------- Footer -------------*/
 footer {
   background-image: url(../images/bg-footer.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
 }
-.text-footer ul li a {
-  margin: 10px 0px;
-  color: #ff8240;
-  font-size: 13px;
-  font-weight: bold;
-  pointer-events: none;
-}
-.text-footer ul li:nth-child(2),
-.text-footer ul li:nth-child(4) {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.text-footer:not(:nth-child(1)) ul li:nth-child(2) a,
-.text-footer ul li:nth-child(4) a {
-  color: #fff !important;
-  font-weight: normal;
-}
-.text-footer:nth-child(1) ul li a {
-  cursor: pointer;
-  pointer-events: all;
-}
-.text-footer:nth-child(1) ul li a:hover {
-  color: #f86d22;
-}
-.text-footer ul li img {
-  width: 35px;
-  height: 35px;
-}
-.text-footer:nth-child(4) ul li:not(:nth-child(1)) a {
-  pointer-events: all;
-}
 
+footer .copyright {
+  border-top: 1px solid rgb(190, 190, 190);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.788);
+}
+footer .copyright p {
+  margin: 5px 0 0 0;
+}
 /* ------ @media ----------*/
 @media (max-width: 992px) {
   .navbar-top-1.hidden {
@@ -506,7 +574,7 @@ footer {
     font-size: 2.5vw;
   }
   .block-banner .content .title {
-    font-size: 3vh;
+    font-size: 3vw !important;
   }
   .block-banner .content .title:nth-child(2) {
     padding-bottom: 0rem;
@@ -530,17 +598,6 @@ footer {
     font-size: 1.2vw;
     font-weight: bold;
   }
-  /* block-features */
-  .block-features .block-inner .block-item.right {
-    font-size: 2.5vw;
-  }
-  .block-item.right .item .title {
-    font-size: 3.5vw;
-  }
-  .block-item.left .item .title {
-    font-size: 9vw;
-    line-height: normal;
-  }
   /* section intro-2 */
   .block-intro-2 .item.right .content-left span {
     width: 40px;
@@ -563,13 +620,48 @@ footer {
   }
   .block-intro-2 .item.right .btn-dk-xe,
   .block-intro-2 .item.right .btn-dk-hang {
-    font-size: 12px;
-    height: 35px;
+    width: 18vh !important;
   }
-  .block-intro-2 .item.right .btn-dk-xe img,
-  .block-intro-2 .item.right .btn-dk-hang img {
-    width: 25px;
-    height: 25px;
+  /*------- section intro-3 -----*/
+  .block-intro-3 .title {
+    text-align: left;
+    padding: 0 28px;
+    font-size: 4vw;
+  }
+  .block-intro-3 .title::before {
+    content: "";
+    background-color: rgb(219, 85, 23);
+    height: 8px;
+    width: 30vw;
+    position: absolute;
+    top: 8%;
+  }
+  .block-intro-3 .block-content {
+    width: 100%;
+    font-size: 2.5vw;
+    margin: 50px 0 0 0;
+  }
+  .block-intro-3 .block-img {
+    width: 100%;
+  }
+  .block-intro-3 .block-img img {
+    width: 100%;
+  }
+  /* block-features */
+  .block-features .head {
+    font-size: 2vw;
+  }
+  .block-features .inline-list {
+    justify-content: flex-start;
+  }
+  .block-features .inline-list img {
+    width: 20vw;
+  }
+  .block-features .inline-list .head-title {
+    font-size: 4vw;
+  }
+  .block-features .inline-list li p {
+    font-size: 2vw;
   }
 }
 @media (max-width: 767px) {
@@ -606,12 +698,26 @@ footer {
   }
   /* block-intro-2 */
   .block-intro-2 .item.left {
+    width: 100%;
     background-size: 70% 100%;
     padding: 50% 0 50%;
-    margin-left: 15%;
+    background-position: center;
   }
-
+  .block-intro-2 .item.right .btn-dk-xe,
+  .block-intro-2 .item.right .btn-dk-hang {
+    width: 20vh !important;
+  }
+  .block-intro-2 .item.right .content-right .title-head {
+    font-size: 17px;
+  }
+  .block-intro-2 .item.right .content-right p {
+    font-size: 17px;
+  }
   /* block-intro-3 */
+  .block-intro-3 .block-content {
+    width: 100%;
+    font-size: 3vw;
+  }
 }
 @media (max-width: 575.98px) {
   .block-banner .content .mt-5 {
@@ -624,27 +730,35 @@ footer {
     border: 1px solid #fff;
   }
   .block-banner .content .title {
-    font-size: 2vh;
+    font-size: 2vw;
   }
   .block-banner .content .title:nth-child(2) {
     padding-bottom: 0rem;
   }
-  /* section 1 */
+  /* section intro-1 -----------*/
   .block-intro .heading {
     font-size: 1.5rem;
   }
-  /*   .block-intro-2 */
+  /*-------block-intro-2 */
   .block-intro-2 .item.left {
     background-size: 70% 100%;
     padding: 50% 0 40%;
-    margin-left: 23%;
   }
 }
 @media all and (max-width: 470px) {
   .block-intro-2 .item.left {
     background-size: 80% 100%;
     padding: 50% 0 50%;
-    margin-left: 25%;
+  }
+  .block-intro-2 .item.right .btn-dk-xe,
+  .block-intro-2 .item.right .btn-dk-hang {
+    width: 15vh !important;
+  }
+  .block-intro-2 .item.right .content-right .title-head {
+    font-size: 15px;
+  }
+  .block-intro-2 .item.right .content-right p {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -686,12 +800,21 @@ footer {
     margin-right: -38px;
   }
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .navbar-nav.navbar-top-2 .nav-item {
     margin-right: 0.5rem;
+    font-size: 14px;
   }
   .block-intro-2 .item.right .item-inner:not(:nth-child(1)) {
     margin-top: 1%;
+  }
+  .block-intro-2 .item.right .content-left {
+    width: auto;
+  }
+  .block-intro-2 .item.right .btn-dk-xe,
+  .block-intro-2 .item.right .btn-dk-hang {
+    width: 13vw;
+    height: 55px;
   }
 }
 @media (max-width: 1250px) {
@@ -703,5 +826,15 @@ footer {
   .navbar-nav.navbar-top-2 .nav-item {
     margin-right: 0.5rem;
     font-size: 13px;
+  }
+  /*-----intro-2-----*/
+}
+/* animate */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(211, 219, 214);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
   }
 }

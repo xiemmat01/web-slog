@@ -12,17 +12,17 @@ link.forEach((link, index) => {
     }
 });
 
-const toggle = $$$(".toggle");
-toggle.addEventListener("click", () => {
-    toggle.classList.toggle("change");
-});
+// const toggle = $$$(".toggle");
+// toggle.addEventListener("click", () => {
+//     toggle.classList.toggle("change");
+// });
 
-point.forEach((active) => {
-    active.onclick = function () {
-        $$$('.point.active').classList.remove('active');
-        this.classList.add('active');
-    }
-});
+// point.forEach((active) => {
+//     active.onclick = function () {
+//         $$$('.point.active').classList.remove('active');
+//         this.classList.add('active');
+//     }
+// });
 
 const search = document.getElementById('search');
 const btnSearch = document.getElementById('btn-search');
@@ -40,6 +40,46 @@ btnSearch.onclick = function (e) {
     search.classList.toggle('hide');
 }
 
+$(document).ready(function () {
+    var btn = $('#go-to-top');
 
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
 
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+
+    $("#slick").ddslick({
+        width: "60px",
+        background: "white",
+        imagePosition: "left",
+        selectText: "Select your favorite social network",
+        // onSelected: function (data) {
+        //     $("#slick").html(data.selectedData.value);
+        // },
+    });
+    $("#slick2").ddslick({
+        width: "60px",
+        background: "white",
+        imagePosition: "left",
+        selectText: "Select your favorite social network",
+    });
+});
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "70%";
+    document.getElementById("body").style.overflow = "hidden";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("body").style.overflow = "scroll";
+}
 
