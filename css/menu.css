@@ -1,25 +1,26 @@
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 70%;
   position: fixed;
   z-index: 1;
   top: 0;
-  right: 0;
+  right: -70%;
   background-color: rgba(41, 44, 87, 0.9);
   overflow-x: hidden;
-  transition: all 0.5s ease;
+  transition: right 0.5s ease-in-out;
   padding-top: 60px;
+
 }
 .sidenav .navlink {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 50px;
   text-decoration: none;
   font-size: 25px;
   color: #e2e2e2d0;
   display: block;
   transition: 0.3s;
 }
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav .navlink:hover {
+  color: #ff5f15;
 }
 .sidenav .closebtn {
   position: absolute;
@@ -29,7 +30,7 @@
   margin-left: 50px;
 }
 #slick2.dd-container {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 50px;
 }
 
 @media screen and (max-height: 450px) {

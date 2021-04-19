@@ -74,12 +74,12 @@ $(document).ready(function () {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "70%";
-    document.getElementById("body").style.overflow = "hidden";
+    document.getElementById("mySidenav").style.right = "0";
+    document.getElementById("body").style.overflowY = "hidden";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("body").style.overflow = "scroll";
+    document.getElementById("mySidenav").style.right = "-70%";
+    document.getElementById("body").style.overflowY = "scroll";
 }
 
