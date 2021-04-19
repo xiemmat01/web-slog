@@ -1,18 +1,19 @@
-@font-face {
+/* @font-face {
   font-family: "Agency FB Bold";
   font-style: normal;
   font-weight: normal;
   src: local("Agency FB Bold"), url("AGENCYB.woff") format("woff");
-}
+} */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
-  background: #f9f9f9;
+  background: #f0f0f0;
 }
 ::-webkit-scrollbar-thumb {
-  width: 6px;
-  background-color: #c1c1c1;
+  width: 5px;
+  background-color: #c4c4c4;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -21,7 +22,7 @@
   padding: 6px;
 }
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito","Oxygen", sans-serif;
 }
 a {
   text-decoration: none;
@@ -42,10 +43,21 @@ header .container-fluid {
 .navbar .navbar-brand {
   width: 25%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 0;
+}
+.navbar .navbar-brand::after {
+  position: absolute;
+  content: "";
+  height: 43px;
+  width: 100%;
+  background: #f47a2d;
+  top: 0;
+  right: 98%;
+  transform: skew(328deg);
 }
 .navbar .navbar-brand .nav-img {
   width: 250px;
+  height: 70px;
 }
 .navbar-expand-xl .navbar-collapse {
   flex-direction: column;
@@ -54,17 +66,22 @@ header .container-fluid {
   width: 100%;
   position: relative;
   justify-content: flex-end;
+  background: #f47a2d;
 }
-.navbar .navbar-nav.navbar-top-1::after {
-  content: "";
-  width: 99.5%;
-  border-bottom: #7c7b7b62 solid 0.5px;
+.navbar .navbar-nav.navbar-top-1::before {
   position: absolute;
-  margin-left: 10px;
-  top: 90%;
+  content: "";
+  height: 100%;
+  width: 99.7%;
+  margin: 0 20px 0 0;
+  background: #f47a2d;
+  transition: 0.35s all ease;
+  right: 0%;
+  transform: skew(-28deg);
 }
 .navbar-nav.navbar-top-1 .nav-item {
   margin-right: 10px;
+  z-index: 1;
 }
 .navbar-nav.navbar-top-1 .nav-link {
   color: rgb(59, 58, 58);
@@ -104,12 +121,12 @@ header .container-fluid {
 }
 .navbar .navbar-nav.navbar-top-2 {
   width: 100%;
-  justify-content: flex-start;
+  justify-content: flex-end;
   font-weight: bold;
 }
-.navbar-nav.navbar-top-2 .nav-item {
+/* .navbar-nav.navbar-top-2 .nav-item {
   width: 15%;
-}
+} */
 .navbar-nav.navbar-top-2 .nav-link {
   color: #013752;
 }
@@ -137,9 +154,6 @@ header .container-fluid {
 }
 .change .bar3 {
   transform: rotate(45deg) translate(-4px, -3px);
-}
-#slick.dd-container {
-  padding: 0 0 0 20px;
 }
 .dd-select {
   border: none !important;
@@ -186,7 +200,7 @@ header .container-fluid {
   font-weight: 700;
   font-style: normal;
 }
-.block-banner .content .title:nth-child(1) {
+/* .block-banner .content .title:nth-child(1) {
   font-family: "Agency FB Bold";
   font-weight: normal;
   font-size: 4vw;
@@ -194,7 +208,7 @@ header .container-fluid {
 }
 .block-banner .content .title:nth-child(3) {
   padding-bottom: auto;
-}
+} */
 /*--------------#region Main ---------------*/
 /*------------- Section intro-1 -----------------*/
 .block-intro {
@@ -208,9 +222,13 @@ header .container-fluid {
   color: #013c5a;
 }
 .block-intro .heading .title {
-  color: #ff5d14;
-  font-family: "Agency FB Bold";
-  font-size: 3.5rem;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.block-intro .heading p {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 800;
 }
 .block-intro .block-inner {
   position: relative;
@@ -251,7 +269,7 @@ header .container-fluid {
 }
 .block-intro-2 .title {
   color: #03415f;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1.7rem;
   padding: 0 20px 30px;
 }
@@ -389,8 +407,8 @@ header .container-fluid {
 }
 .block-intro-3 .title {
   color: #013752;
-  font-weight: bold;
-  font-size: 2.6rem;
+  font-weight: 800;
+  font-size: 1.7rem;
 }
 .block-intro-3 .title span {
   color: #ff5d14;
@@ -402,10 +420,10 @@ header .container-fluid {
 .block-intro-3 .block-content p {
   font-size: 15px;
 }
-.block-intro-3 .block-content h2{
+.block-intro-3 .block-content h2 {
   font-size: 17px;
 }
-.block-intro-3 .block-content ul li{
+.block-intro-3 .block-content ul li {
   font-size: 15px;
   color: #003366;
 }
@@ -507,7 +525,7 @@ header .container-fluid {
 }
 .block-brand .heading .title {
   font-size: 1.7rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #03415f;
 }
 .slider {
@@ -579,34 +597,34 @@ footer {
   background-size: cover;
   background-position: center;
 }
-footer .block-inner{
+footer .block-inner {
   padding: 30px 25px 0 25px;
 }
-footer .block-inner a{
+footer .block-inner a {
   color: rgb(221, 218, 218);
   font-size: 15px;
 }
-footer .block-inner .item ul{
+footer .block-inner .item ul {
   list-style: none;
 }
 footer .block-inner .item ul li:not(:nth-child(1)) {
   padding: 5px 0;
 }
-footer .block-inner .item ul .heading{
+footer .block-inner .item ul .heading {
   margin-bottom: 15px;
 }
-footer .block-inner .item:not(:first-child) ul .heading{
+footer .block-inner .item:not(:first-child) ul .heading {
   padding: 61px 0 0 0;
   position: relative;
 }
-footer .block-inner .item ul .heading a{
+footer .block-inner .item ul .heading a {
   position: absolute;
   bottom: 0;
   font-size: 20px;
   font-weight: bold;
   color: #df5727;
 }
-footer .block-inner .item.item ul li .icon{
+footer .block-inner .item.item ul li .icon {
   font-size: 25px;
   padding: 5px;
 }
@@ -618,7 +636,13 @@ footer .copyright {
 footer .copyright p {
   padding: 15px 0 0 0;
 }
-/* ------ @media ----------*/
+footer .block-inner .item.item-4 ul li img {
+  width: 160px;
+  height: 50px;
+}
+/*==================================================================================
+==================================== @media ========================================
+====================================================================================*/
 @media (max-width: 999px) {
   .navbar-top-1.hidden {
     display: none;
@@ -680,7 +704,7 @@ footer .copyright p {
   }
   .block-intro-2 .item.right .btn-apple,
   .block-intro-2 .item.right .btn-google-play {
-    width: 16vh !important;
+    width: 15vh !important;
   }
   .block-intro-2 .item.right {
     width: 50%;
@@ -701,7 +725,7 @@ footer .copyright p {
   }
   .block-intro-3 .block-content {
     width: 100%;
-    font-size: 2.5vw;
+    font-size: 16px;
     margin: 20px 0 0 0;
     order: 1;
   }
@@ -764,6 +788,9 @@ footer .copyright p {
     font-size: 13px;
   }
   /* block-intro-2 */
+  .block-intro-2 .block-inner {
+    background-size: cover;
+  }
   .block-intro-2 .item.left {
     width: 100%;
     background-size: 70% 100%;
@@ -772,7 +799,7 @@ footer .copyright p {
   }
   .block-intro-2 .item.right .btn-apple,
   .block-intro-2 .item.right .btn-google-play {
-    width: 20vh !important;
+    width: 30vw !important;
   }
   .block-intro-2 .item.right .content-right .title-head {
     font-size: 17px;
@@ -788,10 +815,10 @@ footer .copyright p {
     width: 100%;
     font-size: 15px;
   }
-  .block-intro-3 .block-content h2{
+  .block-intro-3 .block-content h2 {
     font-size: 17px;
   }
-  .block-intro-3 .block-content ul li{
+  .block-intro-3 .block-content ul li {
     font-size: 15px;
     color: #003366;
   }
@@ -829,7 +856,7 @@ footer .copyright p {
   }
   .block-intro-2 .item.right .btn-apple,
   .block-intro-2 .item.right .btn-google-play {
-    width: 16vh !important;
+    width: 30vw !important;
   }
   .block-intro-2 .item.right .content-right .title-head {
     font-size: 15px;
@@ -876,6 +903,10 @@ footer .copyright p {
     top: 70%;
     margin-right: -38px;
   }
+  /* footer */
+  footer .copyright {
+    font-size: 12px;
+  }
 }
 @media (max-width: 1366px) {
   .navbar-nav.navbar-top-2 .nav-item {
@@ -891,12 +922,17 @@ footer .copyright p {
   .block-intro-2 .item.right .btn-apple,
   .block-intro-2 .item.right .btn-google-play {
     width: 13vw;
-    height: 55px;
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1199px) {
+  .navbar .navbar-brand {
+    padding-top: 10px;
+  }
   .navbar-nav.navbar-top-2 .nav-item {
     font-size: 14px;
+  }
+  .navbar .navbar-brand::after {
+    width: 0 !important;
   }
 }
 @media (max-width: 1070px) {

@@ -24,22 +24,6 @@ link.forEach((link, index) => {
 //     }
 // });
 
-const search = document.getElementById('search');
-const btnSearch = document.getElementById('btn-search');
-
-btnSearch.onclick = function (e) {
-    if (!search.classList.contains('hide')) {
-        if (isNaN(search.value)) {
-            if (btnSearch.type == "button") {
-                btnSearch.type = 'submit';
-            } else {
-                btnSearch.type = 'button';
-            }
-        }
-    }
-    search.classList.toggle('hide');
-}
-
 $(document).ready(function () {
     var btn = $('#go-to-top');
 
