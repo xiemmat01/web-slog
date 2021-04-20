@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    var slider = $('#light-slider').lightSlider({
+    var slider = $('#brand-slider').lightSlider({
         item: 5,
-        loop: false,
+        auto: true,
+        loop: true,
         slideMove: 2,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed: 600,
@@ -10,40 +11,49 @@ $(document).ready(function () {
         controls: false,
         responsive: [
             {
+                breakpoint: 1000,
+                settings: {
+                    item: 4,
+                    slideMove: 1,
+                    slideMargin: 20,
+                }
+            },
+            {
                 breakpoint: 900,
                 settings: {
-                    item: 5,
+                    item: 4,
                     slideMove: 1,
-                    slideMargin: 6,
+                    slideMargin: 20,
                 }
             },
             {
                 breakpoint: 800,
                 settings: {
-                    item: 4,
+                    item: 3,
                     slideMove: 1,
-                    slideMargin: 6,
+                    slideMargin: 20,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
                     item: 3,
-                    slideMove: 1
+                    slideMove: 1,
+                    slideMargin: 20,
                 }
             },
             {
                 breakpoint: 432,
                 settings: {
                     item: 2,
-                    slideMove: 1
+                    slideMove: 1,
                 }
             },
             {
-                breakpoint: 320,
+                breakpoint: 370,
                 settings: {
                     item: 1,
-                    slideMove: 1
+                    slideMove: 1,
                 }
             }
         ]
