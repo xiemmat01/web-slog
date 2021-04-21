@@ -3,7 +3,7 @@ $(document).ready(function () {
         item: 5,
         auto: true,
         loop: true,
-        slideMove: 2,
+        slideMove: 1,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed: 600,
         enableDrag: false,
@@ -64,10 +64,10 @@ $(document).ready(function () {
     $('#goToNextSlide').on('click', function () {
         slider.goToNextSlide();
     });
-    $('#news-slide').lightSlider({
+    var slide2 = $('#news-slide').lightSlider({
         item: 3,
-        auto: true,
-        loop: false,
+        auto: false,
+        loop: true,
         slideMove: 1,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed: 600,
@@ -98,6 +98,13 @@ $(document).ready(function () {
             }
         ],
     });
+    $('#goToPrevSlide2').on('click', function () {
+        slide2.goToPrevSlide();
+    });
+    $('#goToNextSlide2').on('click', function () {
+        slide2.goToNextSlide();
+    });
+    // 
     $('#slideIntro-1').lightSlider({
         auto: true,
         enableDrag: false,

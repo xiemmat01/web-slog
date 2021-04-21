@@ -1,6 +1,6 @@
 .sidenav {
   height: 100%;
-  width: 70%;
+  width: 50%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -9,12 +9,11 @@
   overflow-x: hidden;
   transition: right 0.5s ease-in-out;
   padding-top: 60px;
-
 }
 .sidenav .navlink {
   padding: 8px 8px 8px 50px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #e2e2e2d0;
   display: block;
   transition: 0.3s;
@@ -24,20 +23,28 @@
 }
 .sidenav .closebtn {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 1%;
+  right: 5%;
   font-size: 40px;
   margin-left: 50px;
 }
 #slick2.dd-container {
   padding: 8px 8px 8px 50px;
 }
-
-@media screen and (max-height: 450px) {
+@media all and (min-width: 1200px) {
+  .sidenav.hide {
+    display: none;
+  }
+}
+@media all and (max-width: 450px) {
   .sidenav {
     padding-top: 15px;
+    /* width: 100%; */
   }
-  .sidenav a {
-    font-size: 18px;
+  .sidenav .navlink {
+    font-size: 16px;
+  }
+  .sidenav .closebtn {
+    top: -1%;
   }
 }

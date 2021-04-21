@@ -7,22 +7,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 3px;
   height: 6px;
-  background: #f0f0f0;
+  /* background: #f0f0f0; */
 }
 ::-webkit-scrollbar-thumb {
-  width: 5px;
+  width: 3px;
   background-color: #c4c4c4;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-track {
-  padding: 6px;
+  padding: 3px;
 }
 body {
   font-family: "Nunito", "Oxygen", sans-serif;
+  overflow: overlay;
 }
 a {
   text-decoration: none;
@@ -489,6 +490,27 @@ header .container-fluid {
 .block-news .card-title {
   font-size: 18px;
 }
+.block-news .news-content {
+  position: relative;
+}
+#goToPrevSlide2,
+#goToNextSlide2 {
+  border: none;
+  background-color: transparent;
+  color: #df5727;
+  position: absolute;
+  top: 50%;
+}
+#goToPrevSlide2 {
+  left: -3%;
+}
+#goToNextSlide2 {
+  right: -3%;
+}
+#goToPrevSlide2 i,
+#goToNextSlide2 i {
+  font-size: 26px;
+}
 /* ---------Section brand -----------*/
 .block-brand {
   text-align: center;
@@ -717,6 +739,11 @@ footer .block-inner .item.item-4 ul li img {
   .block-intro-3 .block-img img {
     width: 100%;
   }
+  /* block-news */
+  #goToPrevSlide2,
+  #goToNextSlide2 {
+    display: none;
+  }
   /* block-features */
   .block-features .head {
     font-size: 2vw;
@@ -866,6 +893,10 @@ footer .block-inner .item.item-4 ul li img {
   .block-brand .heading .title {
     font-size: 4vh;
   }
+  .block-intro .content {
+    width: auto;
+    height: 340px;
+  }
 }
 @media screen and (max-width: 320px) {
   .block-intro-2 .item.right .content-right p {
@@ -873,7 +904,7 @@ footer .block-inner .item.item-4 ul li img {
     padding: 0 0 10px 0;
   }
   .block-brand .heading .title {
-    font-size: 4vh;
+    font-size: 9vw;
   }
   /* banner */
   .block-banner .content .mt-5 {
@@ -910,7 +941,7 @@ footer .block-inner .item.item-4 ul li img {
     margin-top: 1%;
   }
   .block-intro-2 .item.right .content-left {
-    width: auto;
+    width: 13%;
   }
   .block-intro-2 .item.right .btn-apple,
   .block-intro-2 .item.right .btn-google-play {

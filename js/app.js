@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
     $("#slick2").ddslick({
         width: "60px",
-        background: "white",
+        background: "transparent",
         imagePosition: "left",
         selectText: "Select your favorite social network",
     });
@@ -64,6 +64,6 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidenav").style.right = "-70%";
-    document.getElementById("body").style.overflowY = "scroll";
+    document.getElementById("body").style.overflowY = "overlay";
 }
 
