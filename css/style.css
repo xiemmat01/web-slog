@@ -872,6 +872,10 @@ footer .block-inner .item.item-4 ul li img {
   }
 }
 @media all and (max-width: 470px) {
+  body .title{
+    font-size: 18px !important;
+padding: 0 20px;
+  }
   .btn-next-icon,
   .btn-prev-icon {
     width: 25px;
