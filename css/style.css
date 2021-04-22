@@ -180,12 +180,12 @@ header .container-fluid {
 /*--------------#region Main ---------------*/
 /*------------- Section intro-1 -----------------*/
 .block-intro {
-  padding-top: 20px;
+  padding-top: 50px;
   position: relative;
 }
-.block-intro .heading {
-  font-size: 2rem;
-  font-weight: 700;
+.block-intro .heading .title{
+  font-size: 1.7rem;
+  font-weight: 800;
   position: relative;
   color: #013c5a;
 }
@@ -255,11 +255,10 @@ header .container-fluid {
 .block-intro-2 {
   padding: 0px 0;
 }
-.block-intro-2 .title {
+.block-intro-2 .heading .title {
   color: #03415f;
   font-weight: 800;
   font-size: 1.7rem;
-  padding: 0 20px 30px;
 }
 .block-intro-2 .title span {
   color: #eb6219;
@@ -470,11 +469,10 @@ header .container-fluid {
   justify-content: center;
   flex-direction: column;
 }
-.block-news .heading {
+.block-news .heading .title{
   font-weight: 800;
-  padding-bottom: 20px;
-  color: #013752;
-  font-size: 2.5rem;
+  color: #03415f;
+  font-size: 1.7rem;
 }
 .block-news .card {
   padding: 0 2vw;
@@ -555,7 +553,7 @@ header .container-fluid {
   background-color: transparent;
   color: #df5727;
   position: absolute;
-  top: 50%;
+  top: 65%;
 }
 #goToPrevSlide {
   left: 5%;
@@ -811,7 +809,7 @@ footer .block-inner .item.item-4 ul li img {
     width: 30vw !important;
   }
   .block-intro-2 .item.right .content-right .title-head {
-    font-size: 17px;
+    font-size: unset;
   }
   .block-intro-2 .item.right .content-right p {
     font-size: 17px;
@@ -865,18 +863,23 @@ footer .block-inner .item.item-4 ul li img {
   }
   #goToPrevSlide,
   #goToNextSlide {
-    display: none;
+    display: block;
+    opacity: 0.5;
+  }
+  #goToPrevSlide:focus,
+  #goToNextSlide:focus {
+    opacity: 1;
   }
 }
 @media all and (max-width: 470px) {
   .btn-next-icon,
   .btn-prev-icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
   .btn-next-icon i,
   .btn-prev-icon i {
-    font-size: 20px;
+    font-size: 17px;
   }
   .block-intro-2 .item.left {
     background-size: 80% 100%;
@@ -902,7 +905,20 @@ footer .block-inner .item.item-4 ul li img {
   }
 }
 @media screen and (max-width: 320px) {
+  /* intro */
+  .block-intro .block-item .content .title {
+    font-size: 6vw;
+    line-height: 20px;
+    padding: 115px 0 0 0;
+  }
+  .block-intro .block-item .text {
+    font-size: 14px;
+    max-height: 120px;
+  }
   /* intro-2 */
+  .block-intro-2 .item.right .content-right {
+    padding-left: 10%;
+  }
   .block-intro-2 .item.right .content-right p {
     font-size: 4vw;
     padding: 0 0 10px 0;
@@ -942,6 +958,17 @@ footer .block-inner .item.item-4 ul li img {
   }
   footer .copyright {
     font-size: 12px;
+  }
+  #go-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  #go-to-top.show {
+    opacity: 0.5;
+  }
+  #go-to-top.show:hover {
+    opacity: 1;
   }
 }
 @media (max-width: 1366px) {
