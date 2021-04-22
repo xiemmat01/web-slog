@@ -450,7 +450,7 @@ header .container-fluid {
 }
 .block-features .inline-list li p {
   font-size: 16px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .block-features .inline-list .logo {
   width: 25vw;
@@ -865,6 +865,7 @@ footer .block-inner .item.item-4 ul li img {
   #goToNextSlide {
     display: block;
     opacity: 0.5;
+    top: 55%;
   }
   #goToPrevSlide:focus,
   #goToNextSlide:focus {
