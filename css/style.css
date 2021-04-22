@@ -99,11 +99,11 @@ header .container-fluid {
   color: #013752;
 }
 .navbar-nav.navbar-top-2 .nav-link.active {
-  color: #f86d22;
+  color: #1692cf;
 }
 .navbar-nav.navbar-top-2 .nav-link:focus,
 .navbar-nav.navbar-top-2 .nav-link:hover {
-  color: #eb6219;
+  color: #1692cf;
 }
 .bar1,
 .bar2,
@@ -692,7 +692,7 @@ footer .block-inner .item.item-4 ul li img {
     font-size: 1.2vw;
     font-weight: bold;
   }
-  /* section intro-2 */
+  /* intro-2 */
   .block-intro-2 .item.left {
     background-size: 100% 90%;
     background-position: unset;
@@ -717,6 +717,9 @@ footer .block-inner .item.item-4 ul li img {
   }
   .block-intro-2 .item.right {
     width: 50%;
+  }
+  .block-intro-2 .item.right .item-inner ul li:last-child {
+    padding: 0 0 0 10px;
   }
   /*------- section intro-3 -----*/
   .block-intro-3 .title {
@@ -899,10 +902,19 @@ footer .block-inner .item.item-4 ul li img {
   }
 }
 @media screen and (max-width: 320px) {
+  /* intro-2 */
   .block-intro-2 .item.right .content-right p {
     font-size: 4vw;
     padding: 0 0 10px 0;
   }
+  .block-intro-2 .item.right .item-inner ul li:nth-child(1) {
+    padding-left: 1px;
+  }
+
+  .block-intro-2 .item.right .item-inner ul li {
+    padding: 0 10px;
+  }
+  /* brand */
   .block-brand .heading .title {
     font-size: 9vw;
   }

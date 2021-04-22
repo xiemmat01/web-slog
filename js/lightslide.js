@@ -93,7 +93,7 @@ $(document).ready(function () {
                 breakpoint: 320,
                 settings: {
                     item: 1,
-                    slideMove: 1
+                    slideMove: 2
                 }
             }
         ],
